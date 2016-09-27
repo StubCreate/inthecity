@@ -40,7 +40,7 @@
 					</h1>
 				</div>
 				<div class="site-address large-6 columns">
-					<div class="genericon genericon-time"></div>Open: 10:00 〜 20:00<br>Tel: 082-123-4567</div>
+					<div>YOUR&nbsp;ONLYONE&nbsp;SHOP</div>
 			</div>
 			<nav id="site-navigation" class="navigation-main" role="navigation">
 				<h1 class="menu-toggle text-right">

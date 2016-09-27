@@ -2835,7 +2835,7 @@ object {
    ========================================================================== */
 body {
   color: #6b6b6b;
-  background-color: #fffcf4;
+  background-color: #fff;
   font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
 }
 *{
@@ -2885,11 +2885,11 @@ pre {
 }
 
 #site-navigation {
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.4);
   position: relative;
   z-index: 1;
-  background-color: #33201f;
+  background-color: #fff;
 }
 
 #primary {
@@ -3033,7 +3033,7 @@ ul.postList li {
   display: block;
   text-decoration: none;
   padding: 10px 27px;
-  color: #fff;
+  color: #000;
 }
 
 .navigation-main ul ul {
@@ -3135,10 +3135,10 @@ ul.postList li {
   }
 
   #site-navigation {
-    background-color: #33201f;
+    background-color: #fff;
   }
   #site-navigation .genericon-menu {
-    color: #FFF;
+    color: #000;
   }
 }
 .front-feature {
@@ -3154,9 +3154,7 @@ ul.postList li {
 }
 
 .front-news {
-  background-color: #e0d5b8;
-  padding: 10px 0;
-  margin: 30px 0;
+  background-color: #fff;
 }
 .front-news h3 {
   border-bottom: 1px solid #c6b688;
@@ -3174,7 +3172,7 @@ ul.postList li {
 }
 
 .newspost {
-  background-color: #fffcf4;
+  background-color: #fff;
   margin-bottom: 20px;
   padding: 5px;
   border-radius: 5px;
@@ -3182,7 +3180,7 @@ ul.postList li {
   -moz-border-radius: 5px;
   overflow: hidden;
   font-size: 0.875em;
-  height: 320px;
+  height: 270px;
 }
 
 .newspost:hover {
@@ -3723,4 +3721,27 @@ ul#page_link_menu li a {
 /*header*/
 h1.site-logo img.logo {
   width: 244px;
+}
+
+/*top*/
+h3.tit_top{
+  background : #5D5E5E;
+  background : rgba(93, 94, 94, 1);
+  color: rgb(255, 255, 255);
+  width: 100px;
+  height: 40px;
+  font-size: 1em;
+  padding: 0.7%;
+
+}
+
+h3.tit_news {
+  border-bottom: 1px solid #c6b688;
+  box-shadow: 0 1px 0 #eae2cc;
+  -webkit-box-shadow: 0 1px 0 #eae2cc;
+  -moz-box-shadow: 0 1px 0 #eae2cc;
+}
+
+.clear {
+  clear: both;
 }

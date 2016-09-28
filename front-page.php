@@ -3,11 +3,57 @@
  * The template for displaying front-page
  */
 get_header(); ?>
+<div class="row">
+<div class="large-12 small-12 colums">
+<div class="front-news">
+	<div class="row">
+		<div class="large-12 columns">
+			<h3>New&nbsp;Arrival</h3>
+			<div class="row">
+				<?php query_posts( 'posts_per_page=8' ); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<div class="large-3 small-6 columns">
+					<a href="<?php the_permalink(); ?>">
+						<div class="newspost">
+							<div class="row">
+								<div class="large-12 small-3 columns">
+									<div class="thumbnail">
+									<?php if ( has_post_thumbnail() ) : ?>
+										<?php the_post_thumbnail( 'top-thumb', array( 'class' => 'thumbnail' ) ); ?>
+									<?php else : ?>
+										<img src="<?php echo get_template_directory_uri(); ?>/assets/img/no_image.gif" alt="" title="" />
+									<?php endif; ?>
+									</div>
+								</div>
+
+								<div class="large-12 small-9 columns">
+									<div class="news-meta">
+										<div class="date">
+											<div class="genericon genericon-time"></div>
+											<?php the_time( 'Y/m/d' ); ?>
+										</div>
+										<p>
+											<?php echo mb_substr( get_the_title(), 0, 40 ); ?>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			<?php endwhile; endif; ?>
+			<?php wp_reset_query(); ?>
+			</div>
+		</div>
+	</div> <!-- /row -->
+</div> <!-- /front-news -->
+</div>
+</div>
 
 <div class="row">
-	<div class="large-4 small-12 colums left">
+	<div class="large-6 small-12 colums left">
 		<h3 class="tit_news">News</h3>
-		<dl>
+		<dl class="list_news">
 		<?php
 		   $newslist = get_posts( array(
 		    'category_name' => 'news', //特定のカテゴリースラッグを指定
@@ -26,54 +72,14 @@ get_header(); ?>
 		?>
 		</dl>
 	</div><!-- News -->
-
-	<div class="large-7 small-12 colums right">
-	<div class="front-news">
-		<div class="row">
-			<div class="large-12 columns">
-				<h3>New&nbsp;Arrival</h3>
-				<div class="row">
-					<?php query_posts( 'posts_per_page=4' ); ?>
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<div class="large-6 small-12 columns">
-						<a href="<?php the_permalink(); ?>">
-							<div class="newspost">
-								<div class="row">
-									<div class="large-12 small-3 columns">
-										<div class="thumbnail">
-										<?php if ( has_post_thumbnail() ) : ?>
-											<?php the_post_thumbnail( 'top-thumb', array( 'class' => 'thumbnail' ) ); ?>
-										<?php else : ?>
-											<img src="<?php echo get_template_directory_uri(); ?>/assets/img/no_image.gif" alt="" title="" />
-										<?php endif; ?>
-										</div>
-									</div>
-
-									<div class="large-12 small-9 columns">
-										<div class="news-meta">
-											<div class="date">
-												<div class="genericon genericon-time"></div>
-												<?php the_time( 'Y/m/d' ); ?>
-											</div>
-											<p>
-												<?php echo mb_substr( get_the_title(), 0, 40 ); ?>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-				<?php endwhile; endif; ?>
-				<?php wp_reset_query(); ?>
-				</div>
-			</div>
-		</div> <!-- /row -->
-	</div> <!-- /front-news -->
+	<div class="large-6 small-12 colums right">
+		<h3 class="tit_news">Instagram</h3>
+		<script src="https://snapwidget.com/js/snapwidget.js"></script>
+    <iframe src="https://snapwidget.com/embed/260510" class="snapwidget-widget insta" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+</div><!--SnapWidget-->
 </div>
-<div class="clear"></div>
-</div><!-- /-NewArrivel&news -->
-
+<div class="row">
+<div class="small-9 small-centered large-uncentered columns grid3">
 	<div class="front-sp">
 		<center><h3 class="tit_top">Concept</h3></center>
 		<div class="row">
@@ -81,14 +87,32 @@ get_header(); ?>
 				<div class="circle">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/4.jpg" alt="" />
 				</div>
-			</div> <!--  -->
+			</div>
 
 			<div class="large-6 columns">
 				<h2>みんなの来店を<br />待ってるワンッ！</h2>
-				<p>たまに出勤する、店長のマルくんです。</p>
+				<p>たまに出勤する、店長のマルくんです。サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章
+					サンプル文章サンプル文章サンプル文章サンプル文章サンプル文章</p>
 			</div>
 		</div>
 	</div>
+</div>
+</div>
+<div class="row">
+<div class="blog small-11 small-centered large-uncentered columns grid4">
+	<a href="#">
+	<img src="<?php echo get_template_directory_uri(); ?>/assets/img/btn_blog.jpg" alt="ブログ" />
+	<span class="tit_blog "></span>
+  </a>
+</div>
+</div>
+
+  <div>
+		<center><h3 class="tit_top">Item</h3></center>
+	</div>
+
+
+
 	<div class="row front-feature">
 		<center><h3 class="tit_top">More</h3></center>
 	<?php if ( get_page_by_path( 'concept' ) ) : ?>

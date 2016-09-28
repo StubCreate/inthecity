@@ -232,6 +232,12 @@ add_action( 'init', 'require_login' );
 
 /*News*/
 function custom_excerpt_length( $length ) {
-     return 20; 
+     return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+//概要（抜粋）の省略文字
+function my_excerpt_more($more) {
+	return '';
+}
+add_filter('excerpt_more', 'my_excerpt_more');

@@ -32,16 +32,28 @@
 		<?php do_action( 'before' ); ?>
 		<header id="masthead" class="site-header" role="banner">
 			<div class="row">
-				<div class="site-branding large-6 columns">
+				<div class="site-branding large-12 columns">
 					<h1 class="site-logo">
+						<center>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="inthecity" />
 						</a>
+						<div class="site-address">
+							YOUR&nbsp;ONLYONE&nbsp;SHOP！
+					</div>
+					</center>
 					</h1>
+					<div class="row">
+					<div class="btn_wrap large-4 small-12 columns">
+						<div class="left btn_ac">Access</div>
+						<div class="right"><a href="#">
+							<img class="fb" src="<?php echo get_template_directory_uri(); ?>/assets/img/btn_facebook.png" alt="フェイスブック" />
+						</a>
 				</div>
-				<div class="site-address large-6 columns">
-					<div>YOUR&nbsp;ONLYONE&nbsp;SHOP</div>
 			</div>
+		</div>
+		</div>
+
 			<nav id="site-navigation" class="navigation-main" role="navigation">
 				<h1 class="menu-toggle text-right">
 					<div class="genericon genericon-menu"></div>

@@ -2880,7 +2880,9 @@ pre {
 
 .site-address {
   padding-top: 15px;
-  font-size: 0.7em;
+  font-size: 1em;
+  margin: 20px 0 4px 10px;
+  color: rgba(16, 16, 16, 1);
 }
 
 #site-navigation {
@@ -3052,27 +3054,28 @@ ul.postList li {
 
 .navigation-main ul ul a {
   width: 200px;
-  color: #5F2F08;
+  color: #1f1f1f;
+  font-size: 0.9em;
 }
 
 .navigation-main ul ul a:hover {
-  background-color: #e0d5b8;
+  background-color: #f0f0f0;
 }
 
 .navigation-main ul ul li {
-  background-color: #e0d5b8;
+  background-color: #f0f0f0;
 }
 
 .navigation-main li:hover > a {
-  background-color: #e0d5b8;
+  background-color: #f0f0f0;
 }
 
 .navigation-main ul ul :hover > a {
-  background-color: #bfb18a;
+  background-color: #e0e0e0;
 }
 
 .navigation-main ul ul a:hover {
-  background-color: #9a8a5b;
+  background-color: #cccccc;
 }
 
 .navigation-main ul li:hover > ul {
@@ -3086,6 +3089,8 @@ ul.postList li {
   cursor: pointer;
   margin: 0 20px 0 0;
   padding: 10px 0;
+  position: relative;
+  top:-300px;
 }
 
 .main-small-navigation ul {
@@ -3127,6 +3132,8 @@ ul.postList li {
   .menu-toggle,
   .main-small-navigation ul.nav-menu.toggled-on {
     display: block;
+    position: relative;
+    top:-250px;
   }
 
   .navigation-main ul {
@@ -3737,20 +3744,26 @@ h1.site-logo img.logo {
 
 .btn_wrap {
   flex-wrap: nowrap;
-  position: absolute;
+  position: relative;
   bottom: 200px;
   left: 880px;
+  top:1px;
 }
 
 div.btn_ac
 {
   background : #101010;
   background : rgba(16, 16, 16, 1);
-  width: 50%;
-  padding: 5%;
+  width: 30%;
+  padding: 4%;
   text-align: center;
   color: #fff;
-  margin-top: 5px;
+  margin: 5px 0 0 130px;
+  float: left;
+}
+
+div.btn_fb {
+  float: right;
 }
 
 img.fb {
@@ -3777,7 +3790,7 @@ h3.tit_news {
 .list_news {
   border: 1px ridge rgb(134, 134, 134);
   padding: 2%;
-  margin-top: 34px;
+  margin: 34px 10px 0;
 }
 
 h3.tit_news::after {
@@ -3804,8 +3817,47 @@ span.tit_blog {
   content: "";
   display: block;
   height: 4px;
-  margin: 100px 0 0 620px;
+  margin: 100px 0 0 600px;
   width: 120px;
   position: relative;
   z-index: 100;
+}
+
+/*追加分*/
+@media only screen and (max-width: 768px) {
+  div.blog img {
+    float: right;
+    width: 70%;
+    margin-bottom: 20px;
+  }
+
+  span.tit_blog {
+    background: rgba(16, 16, 16, 1) none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 4px;
+    margin: 100px 0 0 600px;
+    width: 120px;
+    position: relative;
+    z-index: 100;
+    display: none;
+  }
+
+  .btn_wrap {
+    flex-wrap: nowrap;
+    position: static;
+  }
+
+
+
+
+}
+
+
+@media only screen and (max-width: 468px){
+  div.blog img {
+    float: right;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

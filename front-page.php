@@ -12,11 +12,11 @@ get_header(); ?>
 			<div class="row">
 				<?php query_posts( 'posts_per_page=8' ); ?>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<div class="large-3 small-6 columns">
+				<div class="large-3 small-12 columns">
 					<a href="<?php the_permalink(); ?>">
 						<div class="newspost">
 							<div class="row">
-								<div class="large-12 small-3 columns">
+								<div class="large-12 small-4 columns">
 									<div class="thumbnail">
 									<?php if ( has_post_thumbnail() ) : ?>
 										<?php the_post_thumbnail( 'top-thumb', array( 'class' => 'thumbnail' ) ); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
 									</div>
 								</div>
 
-								<div class="large-12 small-9 columns">
+								<div class="large-12 small-8 columns">
 									<div class="news-meta">
 										<div class="date">
 											<div class="genericon genericon-time"></div>
@@ -99,7 +99,7 @@ get_header(); ?>
 </div>
 </div>
 <div class="row">
-<div class="blog small-11 small-centered large-uncentered columns grid4">
+<div class="blog small-11 small-centered large-uncentered columns">
 	<a href="#">
 	<img src="<?php echo get_template_directory_uri(); ?>/assets/img/btn_blog.jpg" alt="ブログ" />
 	<span class="tit_blog "></span>

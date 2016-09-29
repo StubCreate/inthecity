@@ -38,22 +38,24 @@
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="inthecity" />
 						</a>
-						<div class="site-address">
-							YOUR&nbsp;ONLYONE&nbsp;SHOP！
-					</div>
 					</center>
 					</h1>
-					<div class="row">
-					<div class="btn_wrap large-4 small-12 columns">
-						<div class="left btn_ac">Access</div>
-						<div class="right"><a href="#">
-							<img class="fb" src="<?php echo get_template_directory_uri(); ?>/assets/img/btn_facebook.png" alt="フェイスブック" />
-						</a>
-				</div>
-			</div>
-		</div>
-		</div>
-
+	      </div>
+      </div>
+  <div class="row">
+    <div class="btn_wrap large-4 small-12 columns">
+	    <div class="row">
+	      <div class="large-12 small-6 small-centered colums site-address">
+		    YOUR&nbsp;ONLYONE&nbsp;SHOP！
+        </div>
+	        <div class="large-8 small-6 btn_ac">Access</div>
+	        <div class="btn_fb large-4 small-6"><a href="#">
+		      <img class="fb" src="<?php echo get_template_directory_uri(); ?>/assets/img/btn_facebook.png" alt="フェイスブック" />
+	        </a>
+         </div>
+      </div>
+    </div>
+  </div>
 			<nav id="site-navigation" class="navigation-main" role="navigation">
 				<h1 class="menu-toggle text-right">
 					<div class="genericon genericon-menu"></div>
@@ -68,13 +70,28 @@
 		</header>
 		<!-- #masthead -->
 <?php if ( is_home() || is_front_page() ) : ?>
+	<div class="row">
+ <div class="large-8 small-12 left columns">
 		<div id="main-img">
 			<div class="slider1">
-			<div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/main.jpg" alt="インザシティ" /></div>
-			<div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/main.jpg" alt="インザシティ" /></div>
-			<div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/main.jpg" alt="インザシティ" /></div>
+			<div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/city.jpg" alt="インザシティ" /></div>
+			<div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bumb.jpg" alt="インザシティ" /></div>
+			<div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/train.jpg" alt="インザシティ" /></div>
+			<div><img src="<?php echo get_template_directory_uri(); ?>/assets/img/bloss.jpg" alt="インザシティ" /></div>
 			</div>
 		</div>
+	</div>
+	<div class="large-4 right colums">
+		<div class="row">
+			<div class="small-6 columns"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/hikari.jpg" alt="インザシティ" /></div>
+			<div class="small-6 columns"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/stoll.jpg" alt="インザシティ" /></div>
+		</div>
+		<div class="row">
+			<div class="small-6 columns"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/monokuro.jpg" alt="インザシティ" /></div>
+			<div class="small-6 columns"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/iwa.jpg" alt="インザシティ" /></div>
+		</div>
+	</div>
+</div>
 <?php endif; ?>
 <?php if ( ! is_front_page() ) : ?>
 		<div id="main" class="site-main row">

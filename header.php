@@ -32,6 +32,20 @@
 		<?php do_action( 'before' ); ?>
 		<header id="masthead" class="site-header" role="banner">
 			<div class="row">
+				<div class="btn_wrap large-5 small-12 columns">
+					<div class="row">
+						<div class="large-12 small-12 small-centered colums site-address">
+						YOUR&nbsp;ONLYONE&nbsp;SHOP！
+						</div>
+							<div class="large-8 medium-6 small-6 small-centered btn_ac">Access</div>
+							<div class="btn_fb large-4 medium-5 small-5 small-centered"><a href="#">
+							<img class="fb" src="<?php echo get_template_directory_uri(); ?>/assets/img/btn_facebook.png" alt="フェイスブック" />
+							</a>
+						 </div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
 				<div class="site-branding large-12 columns">
 					<h1 class="site-logo">
 						<center>
@@ -42,20 +56,7 @@
 					</h1>
 	      </div>
       </div>
-  <div class="row">
-    <div class="btn_wrap large-4 small-12 columns">
-	    <div class="row">
-	      <div class="large-12 small-6 small-centered colums site-address">
-		    YOUR&nbsp;ONLYONE&nbsp;SHOP！
-        </div>
-	        <div class="large-8 small-6 btn_ac">Access</div>
-	        <div class="btn_fb large-4 small-6"><a href="#">
-		      <img class="fb" src="<?php echo get_template_directory_uri(); ?>/assets/img/btn_facebook.png" alt="フェイスブック" />
-	        </a>
-         </div>
-      </div>
-    </div>
-  </div>
+
 			<nav id="site-navigation" class="navigation-main" role="navigation">
 				<h1 class="menu-toggle text-right">
 					<div class="genericon genericon-menu"></div>
